@@ -8,16 +8,16 @@ decimal promedio = 0M;
 int mayor = 0;
 int menor = 0;
 
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < numero.Length; i++)
 {
     contador++;
     Console.WriteLine($"Ingrese el numero {contador}");
     numero[i] = int.Parse(Console.ReadLine());
-    sumatoria = sumatoria + numero[i];
+    sumatoria += numero[i];
 }
 
 menor = numero[0];
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < numero.Length; i++)
 {
     if (numero[i] > mayor)
     { mayor = numero[i]; }
@@ -28,7 +28,7 @@ for (int i = 0; i < 10; i++)
 
 Console.WriteLine($"La sumatoria de los numeros ingresados es igual a  { sumatoria}");
 promedio = sumatoria / 10;
-Console.WriteLine($"El promedio de los numeros ingresados es igual a  { promedio}");
+Console.WriteLine($"El promedio de los numeros ingresados es igual a  { promedio}"); //no encontre la forma de que me devuelva un decimal, solo devuelve entero
 Console.WriteLine($"El numero mayor ingresado es igual a  { mayor}");
 Console.WriteLine($"El numero menor ingresado es igual a  { menor}");
 
